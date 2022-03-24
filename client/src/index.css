@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: rgb(1, 24, 105);
+    color: #fff;
+    display: flex;
+}
+
+.App {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#root {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Header,
+.Footer {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    z-index: 2;
+}
+
+.Header::before {
+    content: url(./wave_top.svg);
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.Footer::before {
+    content: url(./wave_bottom.svg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.Message {
+    /* display: flex; */
+    /*  justify-content: center;
+    align-items: center; */
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    background: transparent;
+    overflow-y: auto;
+    padding: 0px 0px;
+}
+
+input {
+    width: 50%;
+    font-size: 1.1rem;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: rgba(2, 38, 138, 0.774);
+    color: #fff;
+}
+
+ ::placeholder {
+    color: #fff;
+}
+
+button {
+    font-size: 1.1rem;
+    margin-left: 10px;
+    border: none;
+    border-radius: 15px;
+    background: rgb(60, 2, 250);
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    box-shadow: 3px 3px 20px rgba(3, 57, 351, 0.835), inset 2px 2px 15px rgba(110, 51, 248, 0.835), inset -2px -2px 15px rgba(104, 2, 221, 0.835);
+    transition: .5s ease-in-out;
+}
+
+.Message .message_input {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    z-index: 10;
+    background: transparent;
+}
+
+button:hover {
+    box-shadow: 3px 3px 10px rgba(3, 57, 251, 0.835), inset 0px 1px 8px rgba(51, 94, 248, 0.835), inset -0px -1px 8px rgba(112, 142, 253, 0.835);
+}
+
+.tweet {
+    position: relative;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    margin: auto;
+    max-width: 600px;
+    width: 100%;
+    padding: 30px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.room {
+    position: relative;
+    color: gold;
+    font-size: 1.3rem;
+}
+
+.room span {
+    color: rgb(134, 4, 4);
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+    input {
+        width: 80%;
+        margin-bottom: 9px
+    }
+    .Header::before {
+        top: -10px;
+    }
+}
