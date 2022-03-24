@@ -2,7 +2,7 @@
 
 ![image](./client/src/front.png)
 
-> Super Simple JavaScript NodeJs QR Code generator!
+> Super Simple Chat App!
 
 ### 📚 STACK
 - NodeJs Express
